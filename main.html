@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html id = document>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="/generator/snakeCurve.js"></script>
+    <script src="/generator/spiralCurve.js"></script>
+    <script src="/generator/hilbertCurve.js"></script>
+    <script src="/generator/zOrderCurve.js"></script>
+
+    <script src="convertBase.js"></script>
+    <script src="kdtree.js"></script>
+
+    <!-- <script src="https://dl.dropboxusercontent.com/scl/fi/txpcwue4gne7ua4suc2g6/finalTree.js?rlkey=s4v9k70b2olnbvo3mqrvksub6&st=4k7g5nio&dl=0"></script> -->
+    <!-- <script src="finalTree.js"></script> -->
+
+    <!-- loading these will take a long time -->
+    <!-- is there a way to add loading animation while these are loading? -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+      var loader = document.createElement("div");
+      loader.id = "loader";
+      loader.style.position = "fixed";
+      loader.style.top = "50%";
+      loader.style.left = "50%";
+      loader.style.transform = "translate(-50%, -50%)";
+      loader.style.border = "16px solid #f3f3f3";
+      loader.style.borderRadius = "50%";
+      loader.style.borderTop = "16px solid #3498db";
+      loader.style.width = "120px";
+      loader.style.height = "120px";
+      loader.style.animation = "spin 2s linear infinite";
+      document.body.appendChild(loader);
+
+      window.addEventListener("load", function() {
+        document.body.removeChild(loader);
+      });
+      });
+
+      var style = document.createElement("style");
+      style.type = "text/css";
+      style.innerHTML = "@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }";
+      document.head.appendChild(style);
+    </script>
+    <script src="./split_tree/root_right_right_left_right_right_right_left_right_right_right_left.js"></script>
+    <script src="./split_tree/root_right_right_left_right_left_right_right_right_left_left_left.js"></script>
+    <script src="./split_tree/root_right_right_left_right_left_right_right_right_left_right.js"></script>
+    <script src="./split_tree/root_right_right_left_right_right_right_left_right_right_left.js"></script>
+    <script src="./split_tree/root_right_right_left_right_left_right_right_right_right.js"></script>
+    <script src="./split_tree/root_right_right_left_right_right_right_left_right_left.js"></script>
+    <script src="./split_tree/root_right_right_left_right_left_right_right_left.js"></script>
+    <script src="./split_tree/root_right_right_left_right_right_right_left_left.js"></script>
+    <script src="./split_tree/root_right_right_left_right_right_right_right.js"></script>
+    <script src="./split_tree/root_right_right_right_right_right_right_left.js"></script>
+    <script src="./split_tree/root_right_right_left_right_left_right_left.js"></script>
+    <script src="./split_tree/root_left_left_left_left_right_right_left.js"></script>
+    <script src="./split_tree/root_right_right_right_right_right_left.js"></script>
+    <script src="./split_tree/root_right_right_left_right_right_left.js"></script>
+    <script src="./split_tree/root_right_right_left_right_left_left.js"></script>
+    <script src="./split_tree/root_left_left_left_left_right_left.js"></script>
+    <script src="./split_tree/root_right_right_right_right_left.js"></script>
+    <script src="./split_tree/root_right_right_left_right_left.js"></script>
+    <script src="./split_tree/root_left_left_left_left_left.js"></script>
+    <script src="./split_tree/root_right_right_right_left.js"></script>
+    <script src="./split_tree/root_right_right_left_left.js"></script>
+    <script src="./split_tree/root_left_left_left_right.js"></script>
+    <script src="./split_tree/root_right_right_right.js"></script>
+    <script src="./split_tree/root_left_left_right.js"></script>
+    <script src="./split_tree/root_left_right.js"></script>
+    <script src="./split_tree/root_right_left.js"></script>
+    <script src="./split_tree/root_left.js"></script>
+    <script src="./split_tree/root.js"></script>
+
+    <script src="app.js"></script>
+  </head>
+  <body onload = "init()" id = 'body'>
+    <canvas class = 'pain' id = 'paint'> </canvas>
+    <div id = "result"></div>
+    <input type="button" onclick="clearCanvas(0)" placeholder="CLEAR">
+  </body>
+</html>
