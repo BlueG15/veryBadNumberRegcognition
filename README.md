@@ -1,11 +1,18 @@
 # A very very bad hand written number recognition program
 Background:
 I tried applying kd-tree find nearest neighbor to a traditionally machine learning problem. Heavy emphasis on try
+
+
+
+
 Pros:
 + No machine learning
 + Fully deterministic.
 + Small sized!!. "Trained" only on 200MB of data (30k images of each number).
 + Super fast after the loading period.
+
+
+
 Cons:
 +  You can feel the biases in the data set, i.e a number has to be draw a certain way for it to recognize.
 +  It does NOT perform well at all.
